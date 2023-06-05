@@ -1,7 +1,7 @@
 # oCSS
  Omnis CSS 2.0
 
-# With CSS in HTML, you can change the CSS file and give your web pages an entirely different look. oCSS (Omnis CSS) is an object that will do the same thing for your Omnis application simply by instantiating it in your window superclass.
+With CSS in HTML, you can change the CSS file and give your web pages an entirely different look. oCSS (Omnis CSS) is an object that will do the same thing for your Omnis application simply by instantiating it in your window superclass.
 
 Originally, I instantiated the object in the superclass for each window, which resulted in many instances of oCSS that only were needed when the window first opened. Now it is instantiated as a task variable as an object reference so that it exists only once and can be called from anywhere.
 
