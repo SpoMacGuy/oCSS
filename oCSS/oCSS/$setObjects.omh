@@ -1,0 +1,20 @@
+Optimize method
+
+# Skin the window objects
+
+# Find all items in the window of the indicated type
+Calculate lnTotalLines as ilInterfaceObjList.$linecount()
+While ilInterfaceObjList.inObjType=pnType&ilInterfaceObjList.$line<=lnTotalLines ## Last line wasn't getting set
+	
+	# Create an item reference for the text in the list indicating the path to the object in the window
+	Set reference lirItem to ilInterfaceObjList.iirInterfaceObjRef
+	If pos('$bobjs.0',lirItem.$fullname)
+		Breakpoint This object is corrupt. It will need to be recreated
+		Calculate ilInterfaceObjList.$line as ilInterfaceObjList.$line+1
+		Jump to start of loop
+	End If
+	
+	Do $cinst.[pcMethod](lirItem,pick(pnType<40,pnSubType,#NULL)) ## Call the appropriate method, passing in a reference to the field to change and the subtype
+	Calculate ilInterfaceObjList.$line as ilInterfaceObjList.$line+1
+End While
+#

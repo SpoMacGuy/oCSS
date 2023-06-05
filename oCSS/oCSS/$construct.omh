@@ -1,0 +1,5 @@
+Optimize method
+# Calculate $root.$modes.$stacklimit as 100
+Do inherited
+Set reference iirContainerObj to pirContainerObj ## Store a reference to the calling window
+Do $cinst.$initSkin(iirContainerObj)

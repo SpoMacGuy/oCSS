@@ -1,0 +1,22 @@
+Optimize method
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$fontsize as inFontSize
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$textcolor as inEntryColor
+	Calculate pfrLine.$effect as kBorderPlain
+	# Calculate pfrLine.$cursor as kcursFinger
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$backcolor as inEntryBackgroundColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$bordercolor as inBorderColor
+	Calculate pfrLine.$linestyle as 1
+	If sys(1)>'10.22'
+		Calculate pfrLine.$borderradius as inBorderRadius
+		Calculate pfrLine.['$contentpadding'] as icContentPadding
+		Calculate pfrLine.['$showspellingerrors'] as kTrue ## Put in square brackets to try to force reparsing in Studio 11
+		Calculate pfrLine.['$autocorrectspelling'] as kTrue
+	End If
+	Calculate pfrLine.$fieldstylefocused as 'fldHighlightBlue'
+End If

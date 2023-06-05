@@ -1,0 +1,43 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+# When I take off CtrlPushButton, the button loses its roundness. Don't know why
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$buttonstyle as kUserButton
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$vertcentertext as kTrue
+	If not(isclear(pfrLine.$iconid))&isclear(pfrLine.$text)
+		Calculate pfrLine.$backcolor as inEntryBackgroundColor
+		Calculate pfrLine.$forecolor as inEntryBackgroundColor
+		Calculate pfrLine.$bordercolor as inEntryBorderColor
+		Calculate pfrLine.$backpattern as kPat1
+	Else
+		Calculate pfrLine.$backcolor as inButtonColor ## inButtonColor
+		Calculate pfrLine.$backpattern as kPat1
+		Calculate pfrLine.$bordercolor as inButtonColor
+	End If
+	If pos('dropdown-arrow',pfrLine.$iconid)
+		Calculate pfrLine.$backcolor as inDropdownButtonColor
+		Calculate pfrLine.$forecolor as inDropdownButtonColor
+		Calculate pfrLine.$bordercolor as inEntryBorderColor
+		Calculate pfrLine.$backpattern as kPat1
+	End If
+	If pos('ktoolbarcolor',low(pfrLine.$userinfo))
+		Calculate pfrLine.$backcolor as rgb(10,46,73)
+	End If
+	If not(isnull(pnAltColor))
+		Calculate pfrLine.$backcolor as pnAltColor
+		
+	End If
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$textcolor as inButtonTextColor
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$cursor as kcursFinger
+	If sys(1)>'10.22'
+		Calculate pfrLine.$borderradius as inBorderRadius
+	End If
+	
+End If
+Quit method

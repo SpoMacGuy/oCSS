@@ -1,0 +1,23 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$effect as kBorderCtrlEdit
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$height as inStandardFieldHeight
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$vertcentertext as kTrue
+	Calculate pfrLine.$backcolor as inColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$vertcentertext as kTrue
+	# Calculate pfrLine.$cursor as kcursFinger
+End If
+
+Calculate pfrLine.$buttonstyle as kNoBorderButton
+If not(pos('kcusticon',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$iconid as 0
+End If
+Quit method

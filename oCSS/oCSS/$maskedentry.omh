@@ -1,0 +1,56 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$font as icFontNameChar
+	If pos('ksmall',low(pfrLine.$userinfo))
+		Calculate pfrLine.$fontsize as inFontSize-2
+	Else
+		Calculate pfrLine.$fontsize as inFontSize
+	End If
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$textcolor as inEntryColor
+	# Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$backgroundtheme as kBGThemeControl ## SC-1500 <sm> 20230412: If $fieldstylefocused is set and theme is kBGThemeNone, the first row of a complex grid loses the cursor if there is nothing in the cells
+	Calculate pfrLine.$textcolor as inEntryColor
+	Calculate pfrLine.$height as inStandardFieldHeight
+	Calculate pfrLine.$backcolor as inEntryBackgroundColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$effect as kBorderPlain
+	Calculate pfrLine.$bordercolor as inBorderColor
+	Calculate pfrLine.$linestyle as 1
+	Calculate pfrLine.$vertcentertext as kTrue
+	# Calculate pfrLine.$cursor as kcursFinger
+	If sys(1)>'10.22'
+		Calculate pfrLine.$borderradius as inBorderRadius
+		Calculate pfrLine.$contentpadding as icContentPadding
+	End If
+	Calculate pfrLine.$fieldstylefocused as 'fldHighlightBlue'
+	Set reference lirRef to pfrLine.$container()
+	If lirRef.$objtype=kComplexGrid
+		# Breakpoint
+		If pos('kfloatleftright',low(pfrLine.$userinfo))
+			Calculate pfrLine.$edgefloat as kEFleftRight
+		Else If pos('kfloatright',low(pfrLine.$userinfo))
+			Calculate pfrLine.$edgefloat as kEFright
+		Else If pos('kdisplay',low(pfrLine.$userinfo))
+			# Do not adjust edgefloat
+		Else
+			# Calculate pfrLine.$edgefloat as kEFposnClient ## SC-1424 <sm> 20230215: This should left alone, not none
+		End If
+		If pos('ktotal',low(pfrLine.$userinfo))
+			Calculate pfrLine.$backcolor as inComplexGridHorzFooterFillColor
+		End If
+		
+		If pos('krightjst',low(pfrLine.$userinfo))
+			Calculate pfrLine.$align as kRightJst
+		End If
+		If pos('kborder',low(pfrLine.$userinfo))
+			Calculate pfrLine.$effect as kBorderPlain
+		Else
+			Calculate pfrLine.$effect as kBorderNone
+		End If
+	End If
+End If
+Quit method

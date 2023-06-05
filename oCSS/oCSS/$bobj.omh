@@ -1,0 +1,22 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	If pos('plain',low(pfrLine.$userinfo))
+		Calculate pfrLine.$fieldstyle as ''
+		Calculate pfrLine.$font as icFontNameChar
+		Calculate pfrLine.$fontsize as inFontSize
+		If (pfrLine.$container().$objtype=kComplexGrid)|(pfrLine.$container().$objtype=kGroupBox)|(pfrLine.$container().$objtype=kTabPane)|(pfrLine.$container().$objtype=kPagedPane)|(pfrLine.$container().$objtype=kScrollbox)
+			Calculate pfrLine.$textcolor as inEntryColor
+		Else
+			Calculate pfrLine.$textcolor as inEntryColor
+		End If
+		Calculate pfrLine.$backpattern as kPatTransparent
+		If pos('plain',low(pfrLine.$userinfo))
+			Calculate pfrLine.$fontstyle as kPlain
+		Else
+			Calculate pfrLine.$fontstyle as kBold
+		End If
+	Else
+	End If
+End If

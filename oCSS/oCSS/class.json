@@ -1,0 +1,474 @@
+{
+	"classtype": "kObjectclass",
+	"omnisversion": "10.22",
+	"internalversion": 977,
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "ibIsCompiled",
+			"order": 54,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "ibIsMac",
+			"order": 22,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "ibIsWin",
+			"order": 23,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kTrue"
+		},
+		{
+			"name": "ibShouldCompile",
+			"order": 53,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kFalse"
+		},
+		{
+			"name": "ibUseIcons",
+			"order": 24,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "icCheckboxIcon",
+			"order": 44,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100,
+			"initval": "'checkbox'"
+		},
+		{
+			"name": "icComponentCtrl",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 200
+		},
+		{
+			"name": "icComponentLib",
+			"order": 13,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 200
+		},
+		{
+			"name": "icContentPadding",
+			"order": 55,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 20,
+			"initval": "'3-1-3-1'"
+		},
+		{
+			"name": "icDropdownIcon",
+			"order": 45,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100,
+			"initval": "'dropdown-arrow'"
+		},
+		{
+			"name": "icFontNameChar",
+			"order": 4,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100,
+			"initval": "'Open Sans'",
+			"desc": "'Open Sans'"
+		},
+		{
+			"name": "icLabelFont",
+			"order": 49,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100,
+			"initval": "'Open Sans SemiBold'"
+		},
+		{
+			"name": "icMethod",
+			"order": 11,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 200
+		},
+		{
+			"name": "icName",
+			"order": 10,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 200
+		},
+		{
+			"name": "iirContainerObj",
+			"order": 1,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iirInterfaceObjRef",
+			"order": 16,
+			"type": "kItemref",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ilbObjectTypeList",
+			"order": 7,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ilComponentType",
+			"order": 8,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ilInterfaceObjList",
+			"order": 5,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "ilObjectTypeList",
+			"order": 6,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "inBackgroundColor",
+			"order": 33,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(61,89,145)",
+			"desc": "kWhite"
+		},
+		{
+			"name": "inBorderColor",
+			"order": 30,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(61,89,145)",
+			"desc": "rgb(61,89,145)  rgb(224,224,236)"
+		},
+		{
+			"name": "inBorderRadius",
+			"order": 50,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "6"
+		},
+		{
+			"name": "inButtonColor",
+			"order": 37,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kGreen",
+			"desc": "rgb(55,152,211)"
+		},
+		{
+			"name": "inButtonTextColor",
+			"order": 47,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kWhite"
+		},
+		{
+			"name": "inColor",
+			"order": 28,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(250,250,250)",
+			"desc": "rgb(250,250,250)"
+		},
+		{
+			"name": "inComplexGridBackgroundColor",
+			"order": 31,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kWhite",
+			"desc": "kWhite"
+		},
+		{
+			"name": "inComplexGridDividerColor",
+			"order": 48,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(224,224,236)",
+			"desc": "rgb(224,224,236)"
+		},
+		{
+			"name": "inComplexGridHorzFooterFillColor",
+			"order": 52,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(245,245,245)"
+		},
+		{
+			"name": "inConstant",
+			"order": 9,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inDropdownButtonColor",
+			"order": 51,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(250,250,250)"
+		},
+		{
+			"name": "inEntryBackgroundColor",
+			"order": 35,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kWhite",
+			"desc": "rgb(251,251,251)"
+		},
+		{
+			"name": "inEntryBorderColor",
+			"order": 36,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(224,224,236)",
+			"desc": "rgb(224,224,236)"
+		},
+		{
+			"name": "inEntryColor",
+			"order": 18,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "kBlack",
+			"desc": "kBlack"
+		},
+		{
+			"name": "inExtraGutter",
+			"order": 34,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "6"
+		},
+		{
+			"name": "inFontSize",
+			"order": 2,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "11",
+			"desc": "12"
+		},
+		{
+			"name": "inFontSizeBase",
+			"order": 3,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "11",
+			"desc": "12"
+		},
+		{
+			"name": "inGutter",
+			"order": 21,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "10"
+		},
+		{
+			"name": "inHeaderFillColor",
+			"order": 27,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(55,89,155)",
+			"desc": "rgb(55,89,155)"
+		},
+		{
+			"name": "inLabelTextColor",
+			"order": 29,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(104,101,114)",
+			"desc": "rgb(104,101,114)"
+		},
+		{
+			"name": "inLightTextColor",
+			"order": 19,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inObjSubtype",
+			"order": 17,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inObjType",
+			"order": 12,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inRectBackgroundColor",
+			"order": 32,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(244,244,249)",
+			"desc": "rgb(244,244,249)"
+		},
+		{
+			"name": "inRoundRectBorderColor",
+			"order": 42,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(244,244,249)",
+			"desc": "rgb(244,244,249)"
+		},
+		{
+			"name": "inScrollboxColor",
+			"order": 20,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(250,250,250)",
+			"desc": "rgb(250,250,250)"
+		},
+		{
+			"name": "inSeparatorColor",
+			"order": 46,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(224,224,236)",
+			"desc": "rgba(224,224,236,255)"
+		},
+		{
+			"name": "inShapeType",
+			"order": 15,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inStandardFieldHeight",
+			"order": 38,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "28"
+		},
+		{
+			"name": "inTabStripNormalTabColor",
+			"order": 41,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(40,37,50)",
+			"desc": "rgb(40,37,50)"
+		},
+		{
+			"name": "inTabStripSelectedTabColor",
+			"order": 39,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(55,152,211)",
+			"desc": "rgb(55,152,211)"
+		},
+		{
+			"name": "inTabStripSeletedTextColor",
+			"order": 40,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(55,152,211)",
+			"desc": "rgb(55,152,211)"
+		},
+		{
+			"name": "inToolbarColor",
+			"order": 43,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "rgb(61,89,145)",
+			"desc": "rgb(10,46,73)"
+		},
+		{
+			"name": "inWashEnd",
+			"order": 26,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0
+		},
+		{
+			"name": "inWashStart",
+			"order": 25,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0"
+		}
+	],
+	"properties": {
+		"canremotedebugwhenlocked": false,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2023-05-20 13:49:16",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2023-06-05 09:51:54",
+		"selfcontained": false,
+		"showascheckedout": false,
+		"userinfo": "",
+		"vcsrevision": 0,
+		"version": "1.35.25"
+	}
+}

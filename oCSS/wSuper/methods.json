@@ -1,0 +1,198 @@
+[
+	{
+		"name": "$construct",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setColor",
+		"order": 3,
+		"pvardefs": [
+			{
+				"name": "pnColor",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 1,
+				"initval": "0"
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setParams",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pnColor",
+				"order": 1,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnFontName",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			},
+			{
+				"name": "pnFontSizeBase",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0,
+				"param": 3
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getDividers",
+		"order": 5,
+		"pvardefs": [
+			{
+				"name": "pirGrid",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lcDividerPositions",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lirItem",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$setDividers",
+		"order": 6,
+		"pvardefs": [
+			{
+				"name": "pirGrid",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pcDividerPositions",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lcDividerPositions",
+				"order": 1,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lcWhich",
+				"order": 6,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100
+			},
+			{
+				"name": "lirItem",
+				"order": 3,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lnLocation",
+				"order": 5,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lnValue",
+				"order": 7,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$getWindowPosition",
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$SaveWindowPosition",
+		"order": 8,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$isCompiled",
+		"order": 9,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lrReturnRow",
+				"order": 1,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

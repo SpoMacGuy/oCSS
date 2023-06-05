@@ -1,0 +1,34 @@
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$font as icFontNameChar
+	If pos('ksmall',low(pfrLine.$userinfo))
+		Calculate pfrLine.$fontsize as inFontSize-2
+	Else
+		Calculate pfrLine.$fontsize as inFontSize
+	End If
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$textcolor as inEntryColor
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$height as inStandardFieldHeight
+	Calculate pfrLine.$vertcentertext as kTrue
+	# Calculate pfrLine.$cursor as kcursFinger
+	Calculate pfrLine.$fieldstylefocused as 'fldHighlightBlue'
+	Set reference lirRef to pfrLine.$container()
+	If lirRef.$objtype=kComplexGrid
+		If pos('kfloatleftright',low(pfrLine.$userinfo))
+			Calculate pfrLine.$edgefloat as kEFleftRight
+		Else If pos('kfloatright',low(pfrLine.$userinfo))
+			Calculate pfrLine.$edgefloat as kEFright
+		Else If pos('kdisplay',low(pfrLine.$userinfo))
+			# Do not adjust edgefloat
+		Else
+			# Calculate pfrLine.$edgefloat as kEFnone ## This was overriding kPosnClient
+		End If
+		
+		If pos('krightjst',low(pfrLine.$userinfo))
+			Calculate pfrLine.$align as kRightJst
+		End If
+		Calculate pfrLine.$effect as kBorderNone
+	End If
+End If
+Quit method

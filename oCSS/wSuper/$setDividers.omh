@@ -1,0 +1,9 @@
+
+Do pirGrid.$dividers.$first() Returns lirItem
+While lirItem
+	Calculate lnLocation as strtok('pcDividerPositions',',')
+	If not(isclear(lnLocation))
+		Calculate lirItem.$posn as lnLocation
+	End If
+	Do pirGrid.$dividers.$next(lirItem) Returns lirItem
+End While

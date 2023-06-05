@@ -1,0 +1,17 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeParent ## or kbtparent
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$iconid as 'checkbox'
+	Calculate pfrLine.$backcolor as inColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$vertcentertext as kTrue
+	# Calculate pfrLine.$cursor as kcursFinger
+	
+End If
+Quit method

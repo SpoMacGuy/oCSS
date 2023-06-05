@@ -1,0 +1,8 @@
+Optimize method
+
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$effect as kBorderNone
+	Calculate pfrLine.$bordercolor as inSeparatorColor
+	
+End If

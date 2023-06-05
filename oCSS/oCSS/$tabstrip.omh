@@ -1,0 +1,14 @@
+Optimize method
+
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeParent
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$fontsize as inFontSize
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$selectedtabtextcolor as inTabStripSelectedTabColor
+	Calculate pfrLine.$tabtextcolor as inTabStripNormalTabColor
+	Calculate pfrLine.$squaremode as kTabStripAnimLine
+	Calculate pfrLine.$cursor as kcursFinger
+End If
+Quit method

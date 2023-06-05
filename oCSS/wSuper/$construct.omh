@@ -1,0 +1,6 @@
+Do inherited
+
+If isclear($ctask.torCss)
+	Do $clib.$objects.oCSS.$newref($cinst().$ref) Returns $ctask.torCss
+End If
+Do torCss.$initSkin($cinst().$ref)

@@ -1,0 +1,33 @@
+Optimize method
+
+# Create a list of all normal objects on the window
+# ## Note that we need to add '0' to the $objtype to force it to a numeric value. Without that, it Returnｓ the character version of the object type
+
+Do pfrContainerObj.$objs.$makelist($ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,,$ref()) Returns llInterfaceObjList
+
+# Append all background objects to the list
+If llInterfaceObjList.$linecount()
+	Do pfrContainerObj.$bobjs.$appendlist(llInterfaceObjList,$ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref())
+Else
+	Do pfrContainerObj.$bobjs.$makelist($ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref()) Returns llInterfaceObjList
+End If
+If llInterfaceObjList.$linecount()
+	Do pfrContainerObj.$bobjs.$appendlist(llInterfaceObjList,$ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref())
+Else
+	Do pfrContainerObj.$bobjs.$makelist($ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref()) Returns llInterfaceObjList
+End If
+
+If llInterfaceObjList.$linecount()
+	Do llInterfaceObjList.$redefine(icName,inObjType,icComponentLib,icComponentCtrl,inShapeType,iirInterfaceObjRef)
+	Do llInterfaceObjList.$search($ref.inObjType=kComplexGrid|$ref.inObjType=kGroupBox|$ref.inObjType=kTabPane|$ref.inObjType=kPagedPane|$ref.inObjType=kScrollbox,kTrue,kFalse,kTrue,kTrue)
+	Do llInterfaceObjList.$first(kTrue) Returns lirRefLine
+	While lirRefLine
+		Set reference lirRefObj to lirRefLine.iirinterfaceObjRef
+		Do $cinst.$loadInterfaceObjLists(lirRefObj)
+		Do llInterfaceObjList.$next(lirRefLine,kTrue) Returns lirRefLine
+	End While
+	
+	
+	Do ilInterfaceObjList.$merge(llInterfaceObjList)
+End If
+Quit method ilInterfaceObjList ## OM-131 <sm> 20230511: Return object list

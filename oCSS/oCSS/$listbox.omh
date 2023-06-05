@@ -1,0 +1,32 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$effect as kBorderPlain
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$fontstyle as kPlain
+	Calculate pfrLine.$textcolor as inEntryColor
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	# Calculate pfrLine.$boldheader as kFalse
+	# Calculate pfrLine.$headerfillcolor as inEntryBackgroundColor
+	Calculate pfrLine.$forecolor as inComplexGridBackgroundColor
+	Calculate pfrLine.$backpattern as kPat0
+	Calculate pfrLine.$backcolor as inComplexGridBackgroundColor
+	Calculate pfrLine.$bordercolor as inBorderColor
+	Calculate pfrLine.$linehtextra as 2
+	# Calculate pfrLine.$showheaderlines as kTrue
+	# Calculate pfrLine.$showcolumnlines as kTrue
+	# Calculate pfrLine.$contentlinecolor as inComplexGridDividerColor
+	If sys(1)>'10.22'
+		Calculate pfrLine.$borderradius as inBorderRadius
+		# Calculate pfrLine.['$selectionbackcolor'] as inRectBackgroundColor
+	End If
+End If
+If pos('ksmalllist',low(pfrLine.$userinfo))
+	Calculate pfrLine.$headerfillcolor as rgb(238,238,238)
+	# Calculate pfrLine.$boldheader as kFalse
+	# Calculate pfrLine.$buttonstyle as kUserButton
+	Calculate pfrLine.$linehtextra as 0
+End If

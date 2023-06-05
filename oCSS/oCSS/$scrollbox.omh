@@ -1,0 +1,42 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$horzscroll as kFalse
+	Calculate pfrLine.$vertscroll as kFalse
+	Calculate pfrLine.$backgroundtheme as kBGThemeParent
+	Calculate pfrLine.$backcolor as inScrollboxColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$effect as kBorderNone ## Temp to show colors
+End If
+If pos('kparent',low(pfrLine.$userinfo))
+	Calculate pfrLine.$backgroundtheme as kBGThemeParent
+End If
+If pos('kspacer',low(pfrLine.$userinfo))
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$backcolor as inSeparatorColor
+	If pos('kspacervert',low(pfrLine.$userinfo))
+		If pos('kextra',low(pfrLine.$userinfo))
+			Calculate pfrLine.$width as inGutter+inExtraGutter
+		Else
+			Calculate pfrLine.$width as inGutter
+		End If
+		If pos('k25',low(pfrLine.$userinfo))
+			Calculate pfrLine.$width as 25
+		End If
+	End If
+	If pos('kspacerhorz',low(pfrLine.$userinfo))
+		If pos('kextra',low(pfrLine.$userinfo))
+			Calculate pfrLine.$height as inGutter+inExtraGutter
+		Else
+			Calculate pfrLine.$height as inGutter
+		End If
+	End If
+End If
+If not(isnull(pnAltColor))
+	Calculate pfrLine.$backcolor as pnAltColor
+End If
+
+
+Quit method

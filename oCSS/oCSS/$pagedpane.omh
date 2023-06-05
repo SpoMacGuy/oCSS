@@ -1,0 +1,25 @@
+Optimize method
+# Add your notational settings here
+# ## Example:
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$horzscroll as kFalse
+	Calculate pfrLine.$vertscroll as kFalse
+	Calculate pfrLine.$backcolor as inScrollboxColor
+	Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$backgroundtheme as kBGThemeParent
+End If
+
+Quit method
+Do pfrLine.$objs.$makelist($ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,,$ref()) Returns llInterfaceObjList
+If llInterfaceObjList.$linecount()
+	Do pfrLine.$bobjs.$appendlist(llInterfaceObjList,$ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref())
+Else
+	Do pfrLine.$bobjs.$makelist($ref.$name,$ref.$objtype+0,$ref.$componentlib,$ref.$componentctrl,$ref.$shape,$ref()) Returns llInterfaceObjList
+End If
+Do llInterfaceObjList.$redefine(icName,inObjType,icComponentLib,icComponentCtrl,inShapeType,iirInterfaceObjRef)
+If llInterfaceObjList.$linecount()
+	Do ilObjectTypeList.$sendall($cinst.$setObjects(llInterfaceObjList,$ref.inConstant,$ref.icMethod)) ## For each item in the list, call $setObjects(objectType,methodToCall)
+	Do ilbObjectTypeList.$sendall($cinst.$setbObjects(llInterfaceObjList,$ref.inConstant,$ref.icMethod,$ref.inObjSubtype)) ## For each item in the list, call $setObjects(objectType,methodToCall,objectSubtype)
+	Do ilComponentType.$sendall($cinst.$setComponents(llInterfaceObjList,$ref.icComponentLib,$ref.icComponentCtrl,$ref.icMethod)) ## For each item in the list, call $setObjects(componentLibrary,componentControl,methodToCall)
+End If

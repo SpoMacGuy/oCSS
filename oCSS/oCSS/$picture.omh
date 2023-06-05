@@ -1,0 +1,20 @@
+Optimize method
+Quit method
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$effect as kBorderNone
+	Calculate pfrLine.$keepaspectratio as kTrue
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	
+	
+	Set reference lirRef to pfrLine.$container()
+	If (lirRef.$objtype=kPagedPane)|(lirRef.$objtype=kGroupBox)|(lirRef.$objtype=kScrollbox) ## |lirRef.$objtype=kGroupBox
+		If ibIsWin
+			Calculate pfrLine.$backgroundtheme as kBGThemeParent
+		Else
+			Calculate pfrLine.$backgroundtheme as kBGThemeContainer
+		End If
+	Else
+		Calculate pfrLine.$backgroundtheme as kBGThemeParent
+	End If
+End If

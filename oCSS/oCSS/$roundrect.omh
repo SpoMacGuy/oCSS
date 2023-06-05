@@ -1,0 +1,9 @@
+Optimize method
+
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$bordercolor as inRoundRectBorderColor
+	Calculate pfrLine.$backcolor as inRoundRectBorderColor
+	Calculate pfrLine.$backpattern as kPat1
+End If

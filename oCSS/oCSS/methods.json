@@ -1,0 +1,1135 @@
+[
+	{
+		"name": "$About",
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$construct",
+		"order": 2,
+		"pvardefs": [
+			{
+				"name": "pirContainerObj",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lrCompileRow",
+				"order": 2,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$destruct",
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$initSkin",
+		"order": 4,
+		"pvardefs": [
+			{
+				"name": "pirContainerObj",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnColor",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2,
+				"initval": "inColor"
+			},
+			{
+				"name": "pcFontName",
+				"order": 5,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3,
+				"initval": "icFontNameChar"
+			},
+			{
+				"name": "pnFontBaseSize",
+				"order": 6,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0,
+				"param": 4,
+				"initval": "inFontSizeBase"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 8,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lnExtraFontsAdd",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lrCompileRow",
+				"order": 7,
+				"type": "kRow",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$loadInterfaceObjLists",
+		"order": 5,
+		"pvardefs": [
+			{
+				"name": "pfrContainerObj",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRefLine",
+				"order": 3,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirRefObj",
+				"order": 4,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$loadObjectTypeLists",
+		"order": 6,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$setWindow",
+		"order": 7,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lirBackColorObj",
+				"order": 3,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirWindowRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$setObjects",
+		"order": 8,
+		"pvardefs": [
+			{
+				"name": "pnType",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pcMethod",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			},
+			{
+				"name": "pnSubType",
+				"order": 6,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 3
+			},
+			{
+				"name": "pfrInterfaceObjList",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirItem",
+				"order": 5,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirLine",
+				"order": 4,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lnTotalLines",
+				"order": 7,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$setbObjects",
+		"order": 9,
+		"pvardefs": [
+			{
+				"name": "pfrInterfaceObjList",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnType",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2
+			},
+			{
+				"name": "pcMethod",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pnSubType",
+				"order": 6,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirItem",
+				"order": 5,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirLine",
+				"order": 4,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$setComponents",
+		"order": 10,
+		"pvardefs": [
+			{
+				"name": "pfrInterfaceObjList",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pcComponentLib",
+				"order": 2,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 2
+			},
+			{
+				"name": "pcComponentCtrl",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 3
+			},
+			{
+				"name": "pcMethod",
+				"order": 4,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000,
+				"param": 4
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirItem",
+				"order": 6,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lirLine",
+				"order": 5,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$clearInterfaceObjList",
+		"order": 11,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "-- objects --",
+		"order": 12,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$bobj",
+		"order": 13,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$buttonarea",
+		"order": 14,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$checkbox",
+		"order": 15,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$checkboxlist",
+		"order": 16,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$colorpalette",
+		"order": 17,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$combo",
+		"order": 18,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$complexgrid",
+		"order": 19,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirItem",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$datagrid",
+		"order": 20,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$droplist",
+		"order": 21,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$entry",
+		"order": 22,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$groupbox",
+		"order": 23,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$headedlistbox",
+		"order": 24,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$iconarray",
+		"order": 25,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$listbox",
+		"order": 26,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$maskedentry",
+		"order": 27,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$multilineentry",
+		"order": 28,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$pagedpane",
+		"order": 29,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 2,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lcParent",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lirRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 4,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$picture",
+		"order": 30,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$poplist",
+		"order": 31,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$pushbutton",
+		"order": 32,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnAltColor",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2,
+				"initval": "#NULL"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$radio",
+		"order": 33,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$radiogroup",
+		"order": 34,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$reportmod",
+		"order": 35,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$screenrep",
+		"order": 36,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$scrollbox",
+		"order": 37,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnAltColor",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2,
+				"initval": "#NULL"
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 2,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 3,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$stringgrid",
+		"order": 38,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$subwindow",
+		"order": 39,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 2,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lcParent",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lirRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$tabpane",
+		"order": 40,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "llbObjectTypeList",
+				"order": 5,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llInterfaceObjList",
+				"order": 2,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "llObjectTypeList",
+				"order": 4,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lnTabNumber",
+				"order": 3,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$tabstrip",
+		"order": 41,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$treelist",
+		"order": 42,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "-- background objs --",
+		"order": 43,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$label",
+		"order": 44,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$line",
+		"order": 45,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$rect",
+		"order": 46,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$roundrect",
+		"order": 47,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$shapefield",
+		"order": 48,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			},
+			{
+				"name": "pnSubtype",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0,
+				"param": 2
+			}
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$text",
+		"order": 49,
+		"pvardefs": [
+			{
+				"name": "pfrLine",
+				"order": 1,
+				"type": "kFieldreference",
+				"subtype": 0,
+				"sublen": 0,
+				"param": 1
+			}
+		],
+		"lvardefs": [
+			{
+				"name": "lirRef",
+				"order": 3,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lnExtraFontsNum",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$backpicture",
+		"order": 50,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "-- $getters --",
+		"order": 51,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		],
+		"empty": true
+	},
+	{
+		"name": "$getToolbarColor",
+		"order": 52,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$getGutterSize",
+		"order": 53,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	}
+]

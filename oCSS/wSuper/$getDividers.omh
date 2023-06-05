@@ -1,0 +1,8 @@
+
+Calculate lcDividerPositions as ''
+Do pirGrid.$dividers.$first() Returns lirItem
+While lirItem
+	Calculate lcDividerPositions as con(lcDividerPositions,lirItem.$posn,',')
+	Do pirGrid.$dividers.$next(lirItem) Returns lirItem
+End While
+Quit method trim(lcDividerPositions,kTrue,kTrue,',')

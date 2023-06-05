@@ -1,0 +1,32 @@
+Optimize method
+
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fieldstyle as ''
+	# Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$font as icLabelFont
+	Calculate pfrLine.$textcolor as inLabelTextColor
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$backpattern as kPatTransparent ## Fixed backpattern
+	Calculate pfrLine.$vertcentertext as kTrue
+	Calculate pfrLine.$effect as kBorderNone
+	If not(pos('kheight',low(pfrLine.$userinfo)))
+		Calculate pfrLine.$height as inStandardFieldHeight
+	End If
+	If not(pos('krect',low(pfrLine.$userinfo)))
+		Calculate pfrLine.$backcolor as inBackgroundColor
+	Else
+		Calculate pfrLine.$backcolor as inRectBackgroundColor
+		Calculate pfrLine.$backpattern as kPat1
+	End If
+	If pos('klarge',low(pfrLine.$userinfo))
+		Calculate pfrLine.$fontstyle as kBold
+		Calculate pfrLine.$fontsize as inFontSize+2
+	End If
+	If pos('krequired',low(pfrLine.$userinfo))
+		Calculate pfrLine.$textcolor as kRed
+	End If
+End If
+Set reference lirRef to pfrLine.$container()
+If lirRef.$objtype=kComplexGrid
+End If
+Quit method

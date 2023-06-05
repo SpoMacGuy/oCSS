@@ -1,0 +1,66 @@
+Optimize method
+If pirContainerObj.$isCompiled.$cando()
+	Do pirContainerObj.$isCompiled Returns lrCompileRow
+End If
+If lrCompileRow.$cols=0
+	Set reference iirContainerObj to pirContainerObj ## Store a reference to the calling window
+	Calculate ibShouldCompile as kFalse
+Else If lrCompileRow.ibShouldCompile=kTrue
+	# Breakpoint
+	Calculate ibShouldCompile as lrCompileRow.ibShouldCompile
+	Calculate ibIsCompiled as lrCompileRow.ibIsCompiled
+	Set reference iirContainerObj to [lrCompileRow.icFullName]
+Else
+	Set reference iirContainerObj to pirContainerObj ## Store a reference to the calling window
+	Calculate ibIsCompiled as lrCompileRow.ibIsCompiled
+	Calculate ibShouldCompile as kFalse
+End If
+If ibIsCompiled
+	Quit method
+End If
+
+If not(ibShouldCompile)
+	Do $cwind.$norefresh.$assign(kTrue)
+End If
+# Begin reversible block
+# Calculate $clib.$prefs.$reportnotationerrors as kFalse
+# End reversible block
+
+# Set reference iirContainerObj to pirContainerObj ## Store a reference to the calling window
+
+If isclear(pnColor)
+	Calculate inColor as rgb(242,242,242) ## rgb(197,210,221s) rgb(242,242,242)
+Else
+	Calculate inColor as pnColor
+End If
+
+Calculate lnExtraFontsAdd as 0 ## For Windows
+
+If isclear(ilObjectTypeList.$linecount())
+	Do $cinst.$loadObjectTypeLists
+	Do ilObjectTypeList.$sort($ref.inConstant)
+End If
+
+# Calculate llInterfaceObjList as ilInterfaceObjList ## Push in onto the stack so we can restore later
+Do ilInterfaceObjList.$define(icName,inObjType,icComponentLib,icComponentCtrl,inShapeType,iirInterfaceObjRef)
+Do $cinst.$loadInterfaceObjLists(iirContainerObj)
+Do ilInterfaceObjList.$sort($ref.inObjType)
+Do $cinst.$setWindow() ## Set all properties for the window
+
+# Set all properties for normal window objects
+Calculate ilInterfaceObjList.$line as 1
+Begin reversible block
+	Set current list ilObjectTypeList
+End reversible block
+For each line in list from 1 to #LN step 1 ## #L
+	Do $cinst.$setObjects(ilObjectTypeList.inConstant,ilObjectTypeList.icMethod,ilObjectTypeList.inObjSubtype)
+End For
+
+If not(ibShouldCompile)
+	Do $cwind.$norefresh.$assign(kFalse)
+End If
+If ibShouldCompile
+	Calculate iirContainerObj.$ivardefs.ibIsCompiled.$objinitval as 'kTrue'
+	Calculate iirContainerObj.$ivardefs.ibShouldCompile.$objinitval as 'kFalse'
+	Save class [lrCompileRow.icFullName]
+End If

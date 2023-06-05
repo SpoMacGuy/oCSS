@@ -1,0 +1,25 @@
+Optimize method
+
+# Skin the window
+Set reference lirWindowRef to $topwind
+If isclear(iirContainerObj.$userinfo)
+	Do iirContainerObj.$fieldstyle.$assign('')
+	Do iirContainerObj.$backgroundtheme.$assign(kBGThemeNone)
+	# Do iirContainerObj.$backpattern.$assign(kGradientLR) ## now using backcolor with GradientLR backpattern instead of wash
+	Do iirContainerObj.$backpattern.$assign(kPat0) ## now using backcolor with GradientLR backpattern instead of wash
+	# Do iirContainerObj.$backcolor.$assign(rgb(255,100,200)) ## (rgb(0,0,255) now using backcolor with GradientLR backpattern instead of wash
+	# Do iirContainerObj.$forecolor.$assign(rgb(255,255,255)) ## now using backcolor with GradientLR backpattern instead of wash
+	
+	Do iirContainerObj.$backcolor.$assign(inBackgroundColor) ## (rgb(0,0,255) now using backcolor with GradientLR backpattern instead of wash
+	Do iirContainerObj.$forecolor.$assign(inBackgroundColor) ## now using backcolor with GradientLR backpattern instead of wash
+	
+Else If pos('containercolor',low(iirContainerObj.$userinfo))
+	Calculate iirContainerObj.$fieldstyle as ''
+	Calculate iirContainerObj.$backgroundtheme as kBGThemeNone
+	Calculate iirContainerObj.$backpattern as kPat1
+	Set reference lirRef to iirContainerObj.$container()
+	Do lirRef.$getContainerField Returns lirBackColorObj
+	# Breakpoint This needs to get the color of the "1015" $bobj
+	Calculate iirContainerObj.$backcolor as lirBackColorObj.$backcolor
+	Calculate iirContainerObj.$effect as kBorderNone
+End If

@@ -1,0 +1,24 @@
+Optimize method
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	
+	Calculate pfrLine.$fieldstyle as ''
+	Calculate pfrLine.$backgroundtheme as kBGThemeNone
+	Calculate pfrLine.$font as icFontNameChar
+	Calculate pfrLine.$textcolor as inLabelTextColor
+	Calculate pfrLine.$fontsize as inFontSize-1
+	Calculate pfrLine.$backcolor as inBackgroundColor
+	Calculate pfrLine.$backpattern as kPatTransparent
+	# Calculate pfrLine.$backpattern as kPat1
+	Calculate pfrLine.$vertcentertext as kTrue
+	If not(pos('kheight',low(pfrLine.$userinfo)))
+		Calculate pfrLine.$height as inStandardFieldHeight
+	End If
+	If pos('klarge',low(pfrLine.$userinfo))
+		Calculate pfrLine.$fontstyle as kBold
+		Calculate pfrLine.$fontsize as inFontSize+2
+	End If
+	If pos('krequired',low(pfrLine.$userinfo))
+		Calculate pfrLine.$textcolor as kRed
+	End If
+End If
+Quit method

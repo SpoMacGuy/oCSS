@@ -1,0 +1,6 @@
+# SC-1308 <sm> 20230323: New method $isCompiled to allow for "compiling" oCSS
+# Do lrReturnRow.$define(ibIsCompiled,ibShouldCompile,icFullName)
+# Calculate lrReturnRow.ibIsCompiled as ibIsCompiled
+# Calculate lrReturnRow.ibShouldCompile as ibShouldCompile
+# Calculate lrReturnRow.icFullName as $cclass().$fullname
+# Quit method lrReturnRow

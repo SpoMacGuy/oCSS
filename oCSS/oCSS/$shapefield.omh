@@ -1,0 +1,43 @@
+Optimize method
+# Add your notational settings here
+If not(pos('kcustom',low(pfrLine.$userinfo)))
+	Calculate pfrLine.$fontstyle as kPlain
+	If pfrLine.$iconid=0
+		Calculate pfrLine.$fontsize as inFontSize
+		If (pfrLine.$container().$objtype=kComplexGrid)|(pfrLine.$container().$objtype=kGroupBox)|(pfrLine.$container().$objtype=kTabPane)|(pfrLine.$container().$objtype=kPagedPane)|(pfrLine.$container().$objtype=kScrollbox)
+			Calculate pfrLine.$textcolor as inEntryColor
+		Else
+			Calculate pfrLine.$textcolor as inLightTextColor
+		End If
+		Calculate pfrLine.$height as max(pfrLine.$fontsize*2+1,pfrLine.$height)
+	End If
+End If
+
+
+Switch pnSubtype
+	Case kText
+		
+		
+	Case kRect
+		
+		
+	Case kRoundrect
+		
+		
+	Case kOval
+		
+		
+	Case kLine
+		
+		
+	Case kBackpicture
+		
+		
+	Case kRect3D
+		Calculate pfrLine.$alpha as 255
+	Default
+		# You can leave out some of the subtypes and then the Default will be set for each of those subtypes
+End Switch
+
+# This is set for all types
+# Calculate pfrLine.$effect as kBorderInset

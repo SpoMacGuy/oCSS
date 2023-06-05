@@ -1,0 +1,16 @@
+Optimize method
+
+# Skin the window background objects
+
+# Find all items in the window of the indicated type
+Do pfrInterfaceObjList.$search(kFalse)
+Do pfrInterfaceObjList.$search(($ref.inObjType=pnType)&(pnType>40),kTrue,kFalse,kTrue,kTrue) ## All $bobjs have type > 40
+
+# Loop through only the selected lines
+Do pfrInterfaceObjList.$first(kTrue) Returns lirLine
+While lirLine
+	# Create an item reference for the text in the list indicating the path to the object in the window
+	Set reference lirItem to lirLine.iirInterfaceObjRef
+	Do $cinst.[pcMethod](lirItem,pnSubType) ## Call the appropriate method, passing in a reference to the field to change and the subtype
+	Do pfrInterfaceObjList.$next(lirLine,kTrue) Returns lirLine
+End While
